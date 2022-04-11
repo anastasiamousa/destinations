@@ -13,9 +13,9 @@ struct Country {
     var details: String?
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
     
-    var data: [Country] = [Country(image: UIImage(named: "Athens"),    title: "Athens, Greece",         details: "Athens is the capital of Greece"),
+    var data: [Country] = [Country(image: UIImage(named: "Athens"),    title: "Athens, Greece",         details: "Athens is the capital of Greece. The city dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence beginning somewhere between the 11th and 7th centuries BC. https://www.booking.com/athens"),
                            Country(image: UIImage(named: "Paris"),     title: "Paris, France",          details: "Paris is the capital of France"),
                            Country(image: UIImage(named: "Berlin"),    title: "Berlin, Germany",        details: "Berlin is the capital of Germany"),
                            Country(image: UIImage(named: "Amsterdam"), title: "Amsterdam, Netherlands", details: "Amsterdam is the capital of The Netherlands"),
@@ -30,9 +30,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
+    
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -43,19 +48,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! TableViewCell
-        cell.imageCell.image = self.data[indexPath.row].image
-        cell.labelCell.text = self.data[indexPath.row].title ?? "-"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! TableViewCell
+        cell.setUp(country: self.data[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country = self.data[indexPath.row]
-        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewControllerIdentifier") as? DetailViewController
+        vc?.country = country
+        guard let vc = vc else {
+            return
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        /*let vc = DetailViewController(details: Country.details)
-        vc.title = Country.title
-        navigationController?.pushViewController(vc, animated: true)*/
     }
 }
-

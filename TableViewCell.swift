@@ -14,13 +14,12 @@ class TableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setUp(country: Country) {
+        imageCell.image = country.image
+        labelCell.text = country.title ?? "-"
     }
 
 }
