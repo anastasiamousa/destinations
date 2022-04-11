@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                            Country(image: UIImage(named: "Berlin"),    title: "Berlin, Germany",        details: "Berlin is the capital of Germany"),
                            Country(image: UIImage(named: "Amsterdam"), title: "Amsterdam, Netherlands", details: "Amsterdam is the capital of The Netherlands"),
                            Country(image: UIImage(named: "Brussels"),  title: "Brussels, Belgium",      details: "Brussels is the capital of Belgium"),
-                           Country(image: UIImage(named: "Dublin"),    title: "Dublin, Ireland",        details: "Dublin is the capital of Ireland"),
+                           Country(image: UIImage(named: "Dublin"),    title: "Dublin, Ireland",        details: "]Dublin is the capital of Ireland"),
                            Country(image: UIImage(named: "Madrid"),    title: "Madrid, Spain",          details: "Madrid is the capital of Spain"),
                            Country(image: UIImage(named: "Nicosia"),   title: "Nicosia, Cyprus",        details: "Nicosia is the capital of Cyprus"),
                            Country(image: UIImage(named: "Rome"),      title: "Rome, Italy",            details: "Rome is the capital of Italy"),
@@ -53,9 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let country = self.data[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = DetailViewController(details: data.details)
-        vc.title = data.title
-        navigationController?.pushViewController(vc, animated: true)
+        /*let vc = DetailViewController(details: Country.details)
+        vc.title = Country.title
+        navigationController?.pushViewController(vc, animated: true)*/
     }
 }
 
