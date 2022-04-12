@@ -17,15 +17,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-MC-DjZ">
-                        <rect key="frame" x="20" y="31" width="155" height="116"/>
+                        <rect key="frame" x="20" y="30" width="130" height="110"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-lE-jwY">
-                        <rect key="frame" x="189" y="31" width="187" height="116"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-lE-jwY">
+                        <rect key="frame" x="198" y="35" width="178" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="SC6-Mc-6zU"/>
                             <constraint firstAttribute="width" constant="178" id="ZOb-em-kI5"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -37,11 +37,8 @@
                     <constraint firstItem="ok8-lE-jwY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Kz8-Fp-ezF"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="dR6-MC-DjZ" secondAttribute="bottom" constant="16" id="P1I-AW-MOj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ok8-lE-jwY" secondAttribute="bottom" constant="16" id="R8I-vN-qid"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="ok8-lE-jwY" secondAttribute="trailing" constant="16" id="Te6-6t-tFp"/>
-                    <constraint firstItem="ok8-lE-jwY" firstAttribute="leading" secondItem="dR6-MC-DjZ" secondAttribute="trailing" constant="16" id="YvH-gb-G1x"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ok8-lE-jwY" secondAttribute="bottom" constant="16" id="e5B-bI-cL1"/>
                     <constraint firstItem="dR6-MC-DjZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fa7-RN-7cU"/>
-                    <constraint firstItem="ok8-lE-jwY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="16" id="pC8-q1-JnD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
