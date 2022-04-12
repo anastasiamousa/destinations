@@ -7,7 +7,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailsLabel: UILabel!
-    
+   
     @IBOutlet weak var detailsTextView: UITextView!
     
     var country: Country?
