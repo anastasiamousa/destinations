@@ -18,8 +18,16 @@ class DetailViewController: UIViewController {
         self.detailsLabel.text = self.country?.title
         self.detailsTextView.text = self.country?.details
         
-        /*let attributedAthens = NSMutableAttributedString(string: "Book your next trip to Athens here:" )
-        attributedAthens.addAttribute(.link, value: "https://www.booking.com/athens", range: NSRange(location: 38, length: 55))
-        detailsTextView.attributedText = attributedAthens*/
+        updateTextView()
+        
+    }
+    
+    func updateTextView() {
+        let path = "https://www.booking.com/"
+        let text = detailsTextView.text ?? "-"
+        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "here")
+        detailsTextView.attributedText = attributedString
+        let font = detailsTextView.font
+        detailsTextView.font = font
     }
 }

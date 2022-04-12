@@ -47,16 +47,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="detailsTextView" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-wC-2d6">
-                                <rect key="frame" x="70" y="220" width="275" height="540"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rja-qH-f9C">
-                                <rect key="frame" x="70" y="142" width="275" height="21"/>
+                                <rect key="frame" x="70" y="142" width="274" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NeJ-7n-Kv1"/>
                                 </constraints>
@@ -64,17 +56,28 @@
                                 <color key="textColor" red="0.032754819159999997" green="0.20070231629999999" blue="0.31703044460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="detailsTextView" indicatorStyle="white" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-wC-2d6">
+                                <rect key="frame" x="70" y="219" width="274" height="481"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mof-Tp-ksy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mof-Tp-ksy" firstAttribute="bottom" secondItem="xHd-wC-2d6" secondAttribute="bottom" constant="102" id="Dqp-Pd-5Fc"/>
-                            <constraint firstItem="xHd-wC-2d6" firstAttribute="leading" secondItem="Mof-Tp-ksy" secondAttribute="leading" constant="70" id="EiU-YO-hw1"/>
+                            <constraint firstItem="Mof-Tp-ksy" firstAttribute="trailing" secondItem="xHd-wC-2d6" secondAttribute="trailing" constant="70" id="5MY-lK-4zq"/>
+                            <constraint firstItem="Mof-Tp-ksy" firstAttribute="bottom" secondItem="xHd-wC-2d6" secondAttribute="bottom" constant="162" id="Dqp-Pd-5Fc"/>
+                            <constraint firstItem="xHd-wC-2d6" firstAttribute="centerX" secondItem="SjJ-Ee-tUs" secondAttribute="centerX" id="Njt-iT-eRa"/>
                             <constraint firstItem="Rja-qH-f9C" firstAttribute="leading" secondItem="xHd-wC-2d6" secondAttribute="leading" id="ZW3-wA-bU9"/>
                             <constraint firstItem="Rja-qH-f9C" firstAttribute="trailing" secondItem="xHd-wC-2d6" secondAttribute="trailing" id="d9I-tG-Wuf"/>
                             <constraint firstItem="Rja-qH-f9C" firstAttribute="top" secondItem="Mof-Tp-ksy" secondAttribute="top" constant="98" id="dIH-vv-Uqj"/>
-                            <constraint firstItem="Mof-Tp-ksy" firstAttribute="trailing" secondItem="xHd-wC-2d6" secondAttribute="trailing" constant="69" id="djG-8o-O0u"/>
-                            <constraint firstItem="xHd-wC-2d6" firstAttribute="top" secondItem="Rja-qH-f9C" secondAttribute="bottom" constant="57" id="yyh-Mh-Akp"/>
+                            <constraint firstItem="xHd-wC-2d6" firstAttribute="top" secondItem="Rja-qH-f9C" secondAttribute="bottom" constant="56" id="yyh-Mh-Akp"/>
                         </constraints>
                     </view>
                     <connections>
