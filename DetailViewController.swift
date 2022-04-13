@@ -4,30 +4,33 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDataSource {
     
-    @IBOutlet weak var detailsLabel: UILabel!
-   
-    @IBOutlet weak var detailsTextView: UITextView!
+    @IBOutlet weak var detailTableView: UITableView!
     
     var country: Country?
     
+    //@IBOutlet weak var detailsLabel: UILabel!
+    //@IBOutlet weak var detailsTextView: UITextView!
+    
+    //ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        self.detailsLabel.text = self.country?.title
+        detailTableView.dataSource = self
+        
+        /*self.detailsLabel.text = self.country?.title
         self.detailsTextView.text = self.country?.details
-        
-        updateTextView()
-        
+        updateTextView()*/
     }
     
-    func updateTextView() {
-        let path = "https://www.booking.com/"
-        let text = detailsTextView.text ?? "-"
-        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "here")
-        detailsTextView.attributedText = attributedString
-        let font = detailsTextView.font
-        detailsTextView.font = font
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        return cell
     }
 }

@@ -1,9 +1,6 @@
-//
 //  AppDelegate.swift
 //  destinations
-//
 //  Created by Anastasia Mousa on 11/4/22.
-//
 
 import UIKit
 
