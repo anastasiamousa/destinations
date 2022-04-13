@@ -3,8 +3,17 @@
 //  Created by Anastasia Mousa on 08/4/22.
 
 import UIKit
+ 
+enum ContentEnum {
+    case imageHeader
+    case title
+    case description
+    case gallery
+}
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var structure: [ContentEnum] = [.imageHeader, .title, .description, .gallery]
     
     @IBOutlet weak var detailTableView: UITableView!
     
@@ -18,46 +27,54 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         detailTableView.dataSource = self
         detailTableView.delegate = self
         
-        let nibNameHeader = UINib(nibName: "headerImageTableViewCell", bundle: nil)
+        let nibNameHeader = UINib(nibName: "HeaderImageTableViewCell", bundle: nil)
         detailTableView.register(nibNameHeader, forCellReuseIdentifier: "headerImageTableViewCell")
         
-        let nibNameLocation = UINib(nibName: "locationTitleTableViewCell", bundle: nil)
+        let nibNameLocation = UINib(nibName: "LocationTitleTableViewCell", bundle: nil)
         detailTableView.register(nibNameLocation, forCellReuseIdentifier: "locationTitleTableViewCell")
         
-        let nibNameDetails = UINib(nibName: "detailsTableViewCell", bundle: nil)
+        let nibNameDetails = UINib(nibName: "DetailsTableViewCell", bundle: nil)
         detailTableView.register(nibNameDetails, forCellReuseIdentifier: "detailsTableViewCell")
         
-        let nibNameCollection = UINib(nibName: "collectionTableViewCell", bundle: nil)
+        let nibNameCollection = UINib(nibName: "CollectionTableViewCell", bundle: nil)
         detailTableView.register(nibNameCollection, forCellReuseIdentifier: "collectionTableViewCell")
     }
     
     //height of row
-    func tableView(_tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 204
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 176
     }
     
     //number of row in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return structure.count
     }
     
     //cell for row at
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        
+        switch structure[indexPath.row] {
+            
+        case .imageHeader:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "headerImageTableViewCell" , for: indexPath) as! headerImageTableViewCell
+            cell.setUpHeader(country: country)
             return cell
-        }
-        else if indexPath.section == 1 {
+        case .title:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "locationTitleTableViewCell" , for: indexPath) as! LocationTableViewCell
+            cell.setUpLocationLabel(country: country)
             return cell
-        }
-        else if indexPath.section == 2 {
+        case .description:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "detailsTableViewCell" , for: indexPath) as! detailsTableViewCell
+            cell.setUpDetailsTextView(country: country)
             return cell
-        }
-        else {
+        case .gallery:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "collectionTableViewCell" , for: indexPath) as! CollectionTableViewCell
             return cell
         }
+        
+        /*switch structure[] {
+            
+        }*/
+        
     }
 }

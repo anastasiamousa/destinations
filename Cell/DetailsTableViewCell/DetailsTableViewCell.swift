@@ -16,7 +16,7 @@ class detailsTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    func setUpDetailsTextView(country: Country) {
-        detailsTextView.text = country.details
+    func setUpDetailsTextView(country: Country?) {
+        detailsTextView.attributedText = NSAttributedString.makeHyperlink(for: "https://www.booking.com", in: country?.details ?? "", as: "here")
     }
 }

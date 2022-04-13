@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="attractionsCollectionView" destination="3PJ-hQ-GkK" id="1rD-hX-2sf"/>
             </connections>
-            <point key="canvasLocation" x="-75" y="-688"/>
+            <point key="canvasLocation" x="-188" y="-724"/>
         </tableViewCell>
     </objects>
     <resources>

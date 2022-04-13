@@ -16,8 +16,8 @@ class LocationTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    func setUpLocationLabel(country: Country) {
-        locationLabel.text = country.title
+    func setUpLocationLabel(country: Country?) {
+        locationLabel.text = country?.title
     }
     
 }

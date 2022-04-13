@@ -16,8 +16,8 @@ class headerImageTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    func setUpHeader(country: Country) {
-        headerImage.image = country.image
+    func setUpHeader(country: Country?) {
+        headerImage.image = country?.image
     }
     
 }
