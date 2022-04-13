@@ -1,8 +1,8 @@
 //
-//  headerImageTableViewCell.swift
+//  HeaderImageTableViewCell.swift
 //  destinations
 //
-//  Created by Anastasia Mousa on 12/4/22.
+//  Created by Anastasia Mousa on 13/4/22.
 //
 
 import UIKit

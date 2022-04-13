@@ -1,13 +1,13 @@
 //
-//  locationTableViewCell.swift
+//  LocationTitleTableViewCell.swift
 //  destinations
 //
-//  Created by Anastasia Mousa on 12/4/22.
+//  Created by Anastasia Mousa on 13/4/22.
 //
 
 import UIKit
 
-class locationTableViewCell: UITableViewCell {
+class LocationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var locationLabel: UILabel!
     

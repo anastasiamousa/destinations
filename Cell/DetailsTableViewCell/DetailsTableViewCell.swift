@@ -1,15 +1,14 @@
 //
-//  detailsTableViewCell.swift
+//  DetailsTableViewCell.swift
 //  destinations
 //
-//  Created by Anastasia Mousa on 12/4/22.
+//  Created by Anastasia Mousa on 13/4/22.
 //
 
 import UIKit
 
 class detailsTableViewCell: UITableViewCell {
-    
-    
+   
     @IBOutlet weak var detailsTextView: UITextView!
     
     override func awakeFromNib() {
@@ -20,5 +19,4 @@ class detailsTableViewCell: UITableViewCell {
     func setUpDetailsTextView(country: Country) {
         detailsTextView.text = country.details
     }
-    
 }

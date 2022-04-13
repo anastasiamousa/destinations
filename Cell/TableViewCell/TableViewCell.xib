@@ -46,7 +46,7 @@
                 <outlet property="imageCell" destination="dR6-MC-DjZ" id="sAf-aw-NCb"/>
                 <outlet property="labelCell" destination="ok8-lE-jwY" id="rUx-X0-oUG"/>
             </connections>
-            <point key="canvasLocation" x="-326.08695652173918" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-357" y="133"/>
         </tableViewCell>
     </objects>
 </document>
