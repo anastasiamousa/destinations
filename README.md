@@ -1,2 +1,2 @@
-# destinations
+## Destinations
  
