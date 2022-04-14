@@ -23,6 +23,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        detailTableView.separatorStyle = .none
         
         detailTableView.dataSource = self
         detailTableView.delegate = self
@@ -42,7 +43,14 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     //height of row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 176
+        switch structure [indexPath.row] {
+        case .imageHeader:
+            return detailTableView.frame.width
+        case .title, .description:
+            return UITableView.automaticDimension
+        case .gallery:
+            return UITableView.automaticDimension
+        }
     }
     
     //number of row in section
@@ -52,9 +60,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     //cell for row at
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch structure[indexPath.row] {
-            
         case .imageHeader:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "headerImageTableViewCell" , for: indexPath) as! headerImageTableViewCell
             cell.setUpHeader(country: country)
@@ -71,10 +77,5 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "collectionTableViewCell" , for: indexPath) as! CollectionTableViewCell
             return cell
         }
-        
-        /*switch structure[] {
-            
-        }*/
-        
     }
 }

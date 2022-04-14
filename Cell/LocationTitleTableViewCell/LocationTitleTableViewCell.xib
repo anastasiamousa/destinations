@@ -16,14 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="locationTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJK-QE-m9S">
-                        <rect key="frame" x="16" y="16" width="304" height="24"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="locationTitleLabel" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJK-QE-m9S">
+                        <rect key="frame" x="8" y="8" width="304" height="40"/>
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="24"/>
                         <color key="textColor" red="0.018997587079999999" green="0.1164060688" blue="0.1838756443" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LJK-QE-m9S" secondAttribute="trailing" constant="8" id="KX8-cR-P5o"/>
+                    <constraint firstItem="LJK-QE-m9S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="MmA-QI-Q6I"/>
+                    <constraint firstItem="LJK-QE-m9S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="c2l-Hx-2g9"/>
+                    <constraint firstAttribute="bottom" secondItem="LJK-QE-m9S" secondAttribute="bottom" constant="8" id="jMB-EO-MWq"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

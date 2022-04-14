@@ -16,11 +16,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="224" height="176"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="headerImage" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-UI-Png">
-                        <rect key="frame" x="16" y="0.0" width="160" height="176"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="headerImage" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-UI-Png">
+                        <rect key="frame" x="0.0" y="0.0" width="224" height="176"/>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ebM-UI-Png" secondAttribute="trailing" id="bR3-1F-V0M"/>
+                    <constraint firstAttribute="bottom" secondItem="ebM-UI-Png" secondAttribute="bottom" id="dsv-d1-EG2"/>
+                    <constraint firstItem="ebM-UI-Png" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kca-rd-bqf"/>
+                    <constraint firstItem="ebM-UI-Png" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vvI-qR-zeX"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

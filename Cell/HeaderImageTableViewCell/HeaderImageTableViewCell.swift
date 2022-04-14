@@ -9,7 +9,11 @@ import UIKit
 
 class headerImageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var headerImage: UIImageView!
+    @IBOutlet weak var headerImage: UIImageView! {
+        didSet {
+            headerImage.contentMode = .scaleAspectFit
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
