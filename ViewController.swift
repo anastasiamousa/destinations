@@ -11,11 +11,12 @@ struct Country {
     var image: UIImage?
     var title: String?
     var details: String?
+    var attractions: [UIImage]?
 }
 
 class ViewController: UIViewController {
     
-    var data: [Country] = [Country(image: UIImage(named: "Athens"),    title: "Athens, Greece",         details: "Athens is the capital of Greece. The city dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence beginning between the 11th and 7th centuries BC. Book your next trip to Athens here."),
+    var data: [Country] = [Country(image: UIImage(named: "Athens"),    title: "Athens, Greece",         details: "Athens is the capital of Greece. The city dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence beginning between the 11th and 7th centuries BC. Book your next trip to Athens here.", attractions: [UIImage(imageLiteralResourceName:"AcropolisMuseum"), UIImage(imageLiteralResourceName:"AtticaZoo"), UIImage(imageLiteralResourceName:"SNF"), UIImage(imageLiteralResourceName:"NationalGarden"), UIImage(imageLiteralResourceName:"Benaki")]),
                            Country(image: UIImage(named: "Paris"),     title: "Paris, France",          details: "Paris is the capital of France. Since the 17th century, Paris has been one of the world's major centres of finance, diplomacy, commerce, fashion, gastronomy, science, and arts, and has sometimes been referred to as the capital of the world. Book your next trip to Paris here."),
                            Country(image: UIImage(named: "Berlin"),    title: "Berlin, Germany",        details: "Berlin is the capital and largest city of Germany by both area and population. Its 3.7 million inhabitants make it the European Union's most populous city, according to population within city limits. Book your next trip to Berlin here."),
                            Country(image: UIImage(named: "Amsterdam"), title: "Amsterdam, The Netherlands", details: "Amsterdam is the capital and most populous city of the Netherlands; with a population of 905,234 within the city proper, 1,558,755 in the urban area and 2,480,394 in the metropolitan area. Book your next trip to Amsterdam here."),

@@ -10,31 +10,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="collectionTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="248" id="KGk-i7-Jjw" customClass="CollectionTableViewCell" customModule="destinations" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="collectionTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="collectionTableViewCell" rowHeight="248" id="KGk-i7-Jjw" customClass="CollectionTableViewCell" customModule="destinations" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" restorationIdentifier="attractionsCollectionView" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-hQ-GkK">
-                        <rect key="frame" x="8" y="4" width="304" height="148"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="x18-aS-1aT">
+                        <rect key="frame" x="0.0" y="36" width="320" height="212"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DGX-U4-Kb9">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zZB-li-hVT">
                             <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
-                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awh-kC-eEc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Must see...">
+                                <attributes>
+                                    <font key="NSFont" size="30" name="AppleSDGothicNeo-Light"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="x18-aS-1aT" firstAttribute="top" secondItem="Awh-kC-eEc" secondAttribute="bottom" id="9LQ-By-NWP"/>
+                    <constraint firstAttribute="trailing" secondItem="x18-aS-1aT" secondAttribute="trailing" id="ABq-Ou-8G4"/>
+                    <constraint firstAttribute="trailing" secondItem="Awh-kC-eEc" secondAttribute="trailing" id="RgR-mJ-p4J"/>
+                    <constraint firstItem="Awh-kC-eEc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c2a-XN-Vkq"/>
+                    <constraint firstItem="x18-aS-1aT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qFR-Yf-u6t"/>
+                    <constraint firstItem="Awh-kC-eEc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sT9-Rp-IeI"/>
+                    <constraint firstAttribute="bottom" secondItem="x18-aS-1aT" secondAttribute="bottom" id="xcs-HD-elA"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="attractionsCollectionView" destination="3PJ-hQ-GkK" id="dNj-aQ-uTv"/>
+                <outlet property="attractionsCollectionView" destination="x18-aS-1aT" id="IGg-J0-pC3"/>
             </connections>
-            <point key="canvasLocation" x="-59" y="-865"/>
+            <point key="canvasLocation" x="-3483" y="-12228"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -49,7 +49,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         case .title, .description:
             return UITableView.automaticDimension
         case .gallery:
-            return UITableView.automaticDimension
+            return 150
         }
     }
     
@@ -75,7 +75,19 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             return cell
         case .gallery:
             let cell = detailTableView.dequeueReusableCell(withIdentifier: "collectionTableViewCell" , for: indexPath) as! CollectionTableViewCell
+            cell.setUpCollectionView(country: country)
+            cell.delegate = self
             return cell
         }
     }
+}
+
+extension DetailViewController: CollectionTableViewCellDelegate {
+    func didSelectPhoto(photo: UIImage?) {
+        let imageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
+        imageView.image = photo
+        self.view.addSubview(imageView)
+    }
+    
+    
 }

@@ -8,10 +8,19 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var attractionImage: UIImageView! {
+        didSet {
+            attractionImage.contentMode = .scaleAspectFill
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    
+    func setUpCollectionViewCell(image: UIImage?) {
+        attractionImage.image = image
+    }
 }
