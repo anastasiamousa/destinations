@@ -17,19 +17,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="359" height="196"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="detailsTextView" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xul-tx-IVo">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="detailsTextView" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xul-tx-IVo">
                         <rect key="frame" x="8" y="8" width="343" height="180"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <attributedString key="attributedText">
-                            <fragment>
-                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt llit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <attributes>
-                                    <color key="NSColor" systemColor="labelColor"/>
-                                    <font key="NSFont" size="24" name="AppleSDGothicNeo-Light"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt llit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
@@ -44,7 +37,7 @@
             <connections>
                 <outlet property="detailsTextView" destination="xul-tx-IVo" id="dVn-qN-6Zt"/>
             </connections>
-            <point key="canvasLocation" x="-151.44927536231884" y="-46.205357142857139"/>
+            <point key="canvasLocation" x="-466" y="-637"/>
         </tableViewCell>
     </objects>
     <resources>

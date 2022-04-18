@@ -42,7 +42,7 @@
         <!--Detail View Controller-->
         <scene sceneID="sRt-1m-8v3">
             <objects>
-                <viewController storyboardIdentifier="DetailsViewControllerIdentifier" id="oqT-gg-HyG" customClass="DetailViewController" customModule="destinations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="oqT-gg-HyG" customClass="DetailViewController" customModule="destinations" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SjJ-Ee-tUs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,11 +82,27 @@
                     </view>
                     <connections>
                         <outlet property="detailTableView" destination="FdQ-48-bJi" id="iJg-yg-gam"/>
+                        <segue destination="Haf-cc-2h6" kind="showDetail" identifier="presentSegue" id="ogh-No-2CS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfr-eK-gpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wwC-7a-TMl">
+            <objects>
+                <viewController storyboardIdentifier="presentViewController" id="Haf-cc-2h6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="presentViewController" id="QjN-gE-Icb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zEC-fE-Itf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXI-u7-wLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Gd-Kc-Tkk">

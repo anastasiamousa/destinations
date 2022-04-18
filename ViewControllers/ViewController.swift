@@ -57,7 +57,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UITextView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country = self.data[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewControllerIdentifier") as? DetailViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailViewController
         vc?.country = country
         guard let vc = vc else {
             return

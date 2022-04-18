@@ -39,6 +39,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         let nibNameCollection = UINib(nibName: "CollectionTableViewCell", bundle: nil)
         detailTableView.register(nibNameCollection, forCellReuseIdentifier: "collectionTableViewCell")
+        
     }
     
     //height of row
@@ -84,10 +85,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
 
 extension DetailViewController: CollectionTableViewCellDelegate {
     func didSelectPhoto(photo: UIImage?) {
-        let imageView = UIImageView(frame: CGRect(x: 50, y: 50, width: 100, height: 100))
-        imageView.image = photo
-        self.view.addSubview(imageView)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let presentViewController = storyboard.instantiateViewController(withIdentifier: "presentViewController") as! PresentViewController
+        self.navigationController?.pushViewController(presentViewController, animated: true)
     }
-    
-    
 }

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="x18-aS-1aT">
-                        <rect key="frame" x="0.0" y="36" width="320" height="212"/>
+                        <rect key="frame" x="0.0" y="26.5" width="320" height="221.5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zZB-li-hVT">
                             <size key="itemSize" width="128" height="128"/>
@@ -27,23 +27,18 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awh-kC-eEc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
-                        <attributedString key="attributedText">
-                            <fragment content="Must see...">
-                                <attributes>
-                                    <font key="NSFont" size="30" name="AppleSDGothicNeo-Light"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <nil key="highlightedColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="Must see..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awh-kC-eEc">
+                        <rect key="frame" x="5" y="0.0" width="315" height="26.5"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="22"/>
+                        <color key="textColor" red="0.01892418035" green="0.120972542" blue="0.19080219070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="0.01892418035" green="0.120972542" blue="0.19080219070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="x18-aS-1aT" firstAttribute="top" secondItem="Awh-kC-eEc" secondAttribute="bottom" id="9LQ-By-NWP"/>
                     <constraint firstAttribute="trailing" secondItem="x18-aS-1aT" secondAttribute="trailing" id="ABq-Ou-8G4"/>
+                    <constraint firstItem="Awh-kC-eEc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="DNz-2t-nul"/>
                     <constraint firstAttribute="trailing" secondItem="Awh-kC-eEc" secondAttribute="trailing" id="RgR-mJ-p4J"/>
-                    <constraint firstItem="Awh-kC-eEc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c2a-XN-Vkq"/>
                     <constraint firstItem="x18-aS-1aT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qFR-Yf-u6t"/>
                     <constraint firstItem="Awh-kC-eEc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sT9-Rp-IeI"/>
                     <constraint firstAttribute="bottom" secondItem="x18-aS-1aT" secondAttribute="bottom" id="xcs-HD-elA"/>
@@ -53,7 +48,7 @@
             <connections>
                 <outlet property="attractionsCollectionView" destination="x18-aS-1aT" id="IGg-J0-pC3"/>
             </connections>
-            <point key="canvasLocation" x="-3483" y="-12228"/>
+            <point key="canvasLocation" x="-3484.057971014493" y="-12228.348214285714"/>
         </tableViewCell>
     </objects>
     <resources>

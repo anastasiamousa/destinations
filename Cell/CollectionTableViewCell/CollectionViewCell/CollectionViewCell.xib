@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="125" height="131"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="attractionImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK0-mu-9NN">
+                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="attractionImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eK0-mu-9NN">
                         <rect key="frame" x="0.0" y="0.0" width="125" height="131"/>
                     </imageView>
                 </subviews>
@@ -32,7 +32,7 @@
             <connections>
                 <outlet property="attractionImage" destination="eK0-mu-9NN" id="OOf-tl-2Hp"/>
             </connections>
-            <point key="canvasLocation" x="126.81159420289856" y="-158.37053571428569"/>
+            <point key="canvasLocation" x="-33" y="-166"/>
         </collectionViewCell>
     </objects>
 </document>

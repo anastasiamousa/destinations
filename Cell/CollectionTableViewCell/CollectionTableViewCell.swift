@@ -77,7 +77,6 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     func setUpCollectionView(country: Country?) {
         self.country = country
         self.attractionsCollectionView.reloadData()
-        //attractionsCollectionView.scrollToItem(at: <#T##IndexPath#>, at: ., animated: <#T##Bool#>)
-    }
-    
+        //attractionsCollectionView.scrollToItem(at: country?.attractions?[indexPath.row], at: .centeredVertically, animated: false)
+    }    
 }
