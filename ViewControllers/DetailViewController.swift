@@ -84,9 +84,15 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
 }
 
 extension DetailViewController: CollectionTableViewCellDelegate {
-    func didSelectPhoto(photo: UIImage?) {
+    func didSelectPhoto(index: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let presentViewController = storyboard.instantiateViewController(withIdentifier: "presentViewController") as! PresentViewController
-        self.navigationController?.pushViewController(presentViewController, animated: true)
+        let vc = storyboard.instantiateViewController(withIdentifier: "presentViewController") as? PresentViewController
+        vc?.country = country
+        vc?.index = index
+        guard let vc = vc else {
+            return
+        }
+        
+        self.navigationController?.present(vc, animated: true)
     }
 }

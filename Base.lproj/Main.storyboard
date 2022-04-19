@@ -82,27 +82,50 @@
                     </view>
                     <connections>
                         <outlet property="detailTableView" destination="FdQ-48-bJi" id="iJg-yg-gam"/>
-                        <segue destination="Haf-cc-2h6" kind="showDetail" identifier="presentSegue" id="ogh-No-2CS"/>
+                        <segue destination="Nxi-1d-b9d" kind="showDetail" identifier="presentSegue" id="t7W-Nf-tDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfr-eK-gpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="76"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="wwC-7a-TMl">
+        <!--Present View Controller-->
+        <scene sceneID="yES-RJ-xkZ">
             <objects>
-                <viewController storyboardIdentifier="presentViewController" id="Haf-cc-2h6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="presentViewController" id="QjN-gE-Icb">
+                <viewController restorationIdentifier="presentViewController" storyboardIdentifier="presentViewController" id="Nxi-1d-b9d" customClass="PresentViewController" customModule="destinations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="presentViewController" id="czQ-y6-1CQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zEC-fE-Itf"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="presentCollectionView" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zRi-GV-dwB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="t4z-PE-Ane">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0pp-mN-1VA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0pp-mN-1VA" firstAttribute="bottom" secondItem="zRi-GV-dwB" secondAttribute="bottom" id="N1s-QT-LiG"/>
+                            <constraint firstItem="zRi-GV-dwB" firstAttribute="leading" secondItem="0pp-mN-1VA" secondAttribute="leading" id="SF5-7k-R3f"/>
+                            <constraint firstItem="zRi-GV-dwB" firstAttribute="top" secondItem="0pp-mN-1VA" secondAttribute="top" id="TVl-Cy-Jf2"/>
+                            <constraint firstItem="0pp-mN-1VA" firstAttribute="trailing" secondItem="zRi-GV-dwB" secondAttribute="trailing" id="vnG-bN-lZh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="U2I-VN-nbh"/>
+                    <connections>
+                        <outlet property="presentCollectionView" destination="zRi-GV-dwB" id="Lm4-Pa-dHc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QXI-u7-wLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5S-Pb-qgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="76"/>
+            <point key="canvasLocation" x="1868" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Gd-Kc-Tkk">

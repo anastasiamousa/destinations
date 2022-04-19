@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CollectionTableViewCellDelegate: AnyObject {
-    func didSelectPhoto(photo: UIImage?)
+    func didSelectPhoto(index: Int)
 }
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -71,12 +71,11 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.delegate?.didSelectPhoto(photo: country?.attractions?[indexPath.row])
+        self.delegate?.didSelectPhoto(index: indexPath.row)
     }
     
     func setUpCollectionView(country: Country?) {
         self.country = country
         self.attractionsCollectionView.reloadData()
-        //attractionsCollectionView.scrollToItem(at: country?.attractions?[indexPath.row], at: .centeredVertically, animated: false)
     }    
 }
